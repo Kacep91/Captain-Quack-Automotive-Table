@@ -75,7 +75,10 @@ body{
     height: 30px;
     transition: all 0.2s;
 }
-
+.fix{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .delete:hover{
     color: #ffffff;
     background-color: rgb(40, 45, 48);
@@ -210,26 +213,12 @@ select:focus-within{
     height: 0;   
     
 }
-/* IMAGE STYLES */
-    /*  [type=radio] + img {
-    cursor: pointer;      
-} */
-/* CHECKED STYLES */
-/* [type=radio]:checked + img ~ .img-checked-bg {
-    visibility: visible;
-} */
+
 .img-front{
     position:relative;
     z-index: 1;
 }
 .img-checked-bg{
-    visibility: hidden;
-    position: absolute;
-    bottom: 3px;
-    left: 3.3px;
-    z-index: 0;
-}
-.img-checked-bg-toggled{
     visibility: hidden;
     position: absolute;
     bottom: 3px;
@@ -249,7 +238,7 @@ select:focus-within{
 /* Animations */
 label.placeholder-animation {
     position:relative;    
-    width: 100%;     
+    width: 100%;       
 }
     
 span.placeholder-animation {
@@ -307,6 +296,123 @@ input#description:focus + span.placeholder-animation, input#description:not(:-ms
 }
 
 /* MEDIA QUERIES */
+
+@media (min-width: 300px) and (max-width: 719px)
+{
+.fix{
+    padding: 0 !important;
+}
+.limiter{
+    max-width: 680px !important;
+}
+#mobile-inputs{
+    display: grid !important;
+    grid-template-areas: "name name" "price year";   
+    margin-bottom: 0; 
+    grid-template-rows: 50% 50%; 
+    grid-template-columns: 45% 45%;  
+    grid-column-gap: 20px;
+}
+
+.mobile-div-name{
+    grid-area: name;
+    width: 100% !important;
+}
+.mobile-div-year{
+    grid-area: year;
+    width: 100% !important;    
+}
+.mobile-div-price{
+    grid-area: price;
+    width: 100% !important;
+}
+
+#mobile-inputs2{
+    display: grid !important;
+    grid-template-areas: "color color" "select send"; 
+    grid-template-rows: 50% 50%; 
+    grid-template-columns: 45% 45%;  
+    grid-column-gap: 20px; 
+}
+
+.mobile-div-color{
+    grid-area: color;
+    width: 100% !important;
+}
+.mobile-div-select{
+    grid-area: select;
+    width: 100% !important;
+}
+.mobile-div-send{
+    grid-area: send;
+    width: 100% !important;
+}
+
+.cars-available{
+    display: none;
+}
+table, th, td, tr {
+    display: block; 
+    text-align: left; 
+    width: auto; 
+    }
+thead tr {
+    position: absolute; 
+    top: -9999px; 
+    left: -9999px; 
+    }    
+.cards-break{    
+    margin-top: 10px;
+    }
+
+#table-cars{   
+    
+    margin-bottom: 5%;
+}
+label.placeholder-animation{
+    max-width: 650px;  
+}
+input#name, input#year, input#price{    
+    width: 100% !important;
+    max-width: 650px;
+    height: 40px;
+    border-radius: 0% !important;
+    border-top: 1px solid #dcdcdc !important;
+    border-right: 1px solid #dcdcdc !important;
+    border-bottom: 2px solid #dcdcdc !important;
+    border-left: 1px solid #dcdcdc !important;    
+}
+.form-limit{
+    width: 100% !important;      
+}
+
+.btn-send{
+    background-color: #c4092f !important;
+    color: #ffffff !important;
+    width: 100% !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+}
+.selector-status, .radio-colors{
+    width: 100% !important; 
+    height: 40px !important;     
+}
+.img-size{
+    width: 20px !important;
+    height: 20px !important;
+}
+.main-text{
+    color: black;
+    font-size: 14px;
+}
+.sub-text{
+    color: #797979;
+    font-size: 14px;
+}
+};
+
+
+
 @media (min-width: 720px) and (max-width: 978px)
 {
 
