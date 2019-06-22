@@ -1,0 +1,279 @@
+<html>
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300, 400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>    
+    <div id="header" class="container-fluid">
+        <div class="header-image d-flex m-auto justify-content-center">
+            <img src="img/duck.png" alt="">
+        </div>
+    </div>
+    <div class="container d-flex flex-column limiter">
+    <p class="ml-auto mr-auto mb-4 mt-4 pb-4 pt-4 caramba-text">¡Ay caramba!</p>        
+    <form id="push-car" class="d-inline-flex flex-fill justify-content-between" onsubmit="return AddData()">
+        <div class="form-group form-limit d-flex"> 
+            <label class="placeholder-animation flex-fill">              
+                <input type="text" class="form-control" id="name" aria-describedby="nameInput" placeholder=" " class="placeholder-animation"> 
+                <span class="placeholder-animation">Название</span>
+            </label>                
+        </div>
+        <div class="form-group form-limit fix d-flex">  
+            <label class="placeholder-animation flex-fill">              
+                <input type="text" class="form-control" id="year" aria-describedby="yearInput" placeholder=" " class="placeholder-animation">   
+                <span class="placeholder-animation">Год</span>
+            </label> 
+        </div>
+        <div class="form-group form-limit d-flex"> 
+            <label class="placeholder-animation flex-fill">            
+                <input type="text" class="form-control" id="price" aria-describedby="priceInput" placeholder=" " class="placeholder-animation"> 
+                <span class="placeholder-animation">Цена</span> 
+            </label>  
+        </div>
+    </form>
+    <form class="d-flex flex-row">
+        <div class="form-group flex-fill">   
+            <label class="placeholder-animation flex-fill">             
+                <input type="text" class="form-control" id="description" aria-describedby="description" placeholder=" ">  
+                <span class="placeholder-animation">Описание</span> 
+            </label>               
+        </div>        
+    </form>
+    <form id="fire" class="d-inline-flex flex-fill justify-content-between align-content-center">
+    <div class="radio-colors form-limit d-flex flex-row align-items-center justify-content-start p-0 m-0">
+        <label class="color-text">Цвет</label>
+        <div class="form-check pl-2 pr-2">
+                <label>
+                    <input class="form-check-input" type="radio" name="color" id="colorWhite" value="white">
+                    <img src="img/white.png" class="img-circle img-front" id="white">
+                    <img src="/img/img-bg-checked.png" class='img-checked-bg' id="whitebg">
+                </label>
+            </div>
+        <div class="form-check pl-2 pr-2">
+            <label>    
+                <input class="form-check-input" type="radio" name="color" id="colorBlack" value="black">  
+                <img src="img/black.png" class="img-circle img-front" id="black">  
+                <img src="/img/img-bg-checked.png" class='img-checked-bg' id="blackbg">
+            </label>   
+        </div>
+        <div class="form-check pl-2 pr-2">
+                <label>    
+                    <input class="form-check-input" type="radio" name="color" id="colorGrey" value="grey">  
+                    <img src="img/grey.png" class="img-circle img-front" id="grey"> 
+                    <img src="/img/img-bg-checked.png" class='img-checked-bg' id="greybg"> 
+                </label>   
+            </div>
+        <div class="form-check pl-2 pr-2">
+            <label>    
+                <input class="form-check-input" type="radio" name="color" id="colorRed" value="red">  
+                <img src="img/red.png" class="img-circle img-front" id="red">  
+                <img src="/img/img-bg-checked.png" class='img-checked-bg' id="redbg">
+            </label>   
+        </div>
+        <div class="form-check pl-2 pr-2">
+            <label>    
+                <input class="form-check-input" type="radio" name="color" id="colorGreen" value="green">  
+                <img src="img/green.png" class="img-circle img-front" id="green">  
+                <img src="/img/img-bg-checked.png" class='img-checked-bg' id="greenbg">
+            </label>   
+        </div>
+    </div>
+        <select class="selector-status form-limit fix" id="status-selector">
+                <option selected value="Статус не выбран">Статус</option>
+                <option value="В наличии">В наличии</option>
+                <option value="Ожидается">Ожидается</option>
+                <option value="Нет в наличии">Нет в наличии</option>
+        </select>
+        <button type="button" class="btn btn-send form-limit" onclick="return AddData()">ОТПРАВИТЬ ></button>
+    </form>
+    
+<div class="cars-available"><p class="cars-available-text">АВТОМОБИЛИ В НАЛИЧИИ</p></div>
+    <table id="table-cars" class="table">
+		<thead>
+			<tr>
+				<th class="table-header table-width-40 corner-top-left-rounded">Название</th>
+				<th class="table-header">Год</th>
+				<th class="table-header">Цвет</th>
+                <th class="table-header w-25">Статус</th>
+                <th class="table-header w-25">Цена</th>
+                <th class="table-header corner-top-right-rounded"></th>                
+			</tr>
+		</thead>
+    </table>
+</div>
+<div id="footer" class="container-fluid">
+    <div class="header-image d-flex ml-auto mr-auto text-center justify-content-center align-content-center">
+        <p class="footer-text">© 2015 CAPTAIN QUACK <br/> Десница тысячелетия и моллюск!</p>
+    </div>
+</div>
+    <!-- SCRIPTS-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- LOADING JSON TABLE -->
+    <script type="text/javascript">
+            function getJSONData() {
+            //
+            $.getJSON("https://rawgit.com/Varinetz/e6cbadec972e76a340c41a65fcc2a6b3/raw/90191826a3bac2ff0761040ed1d95c59f14eaf26/frontend_test_table.json", function(json) {
+                
+                $('#table-cars').append("<tbody id='car-list'>");
+                for (let counter = 0; counter < json.length; counter++) {
+                    $('#table-cars').append("<tr class='row" + counter +" main-text table-body-bg'><td id='fix" + counter + "'>" + json[counter].title + "<br/>" + "<span class='sub-text'>" + json[counter].description + "</span>" + "</td>"
+                    + "<td class='row" + counter +" main-text'>" + json[counter].year + "</td>" 
+                    + "<td id='color" + [counter] + "' class='row" + counter +" main-text'>" + json[counter].color + "</td>" 
+                    + "<td id='status" + [counter] + "' class='row" + counter +" main-text'>" + json[counter].status + "</td>" 
+                    + "<td class='row" + counter +" main-text'>" + json[counter].price + " руб." + "</td>" 
+                    + "<td class='row" + counter +" main-text'>" + "<button class='delete' onclick='$(this).closest(`tr`).remove();'>Удалить</button>" + "</td></tr>");
+                    // COLOR TEXT REPLACEMENT
+                    for (let i = 0; i < 5; i++) {
+                        let color = $("td#color"+i).text() + ".png";
+                        let img = 'img/';
+                        $("td#color"+i).text("").append(`<img src='${img}${color}'>`);
+                        }; 
+                    // if ($('td#color0:contains("red")')){
+                    //     $('td#color0').text("").append("<img src='img/red.png' class='p-2'>");
+                    // }    
+                    // if ($("td#color1:contains('white')")) {
+                    //     $('td#color1').text("").append("<img src='img/white.png' class='p-2'>");
+                    // }  
+                    // if ($('td#color2:contains("black")')) {
+                    //     $('td#color2').text("").append("<img src='img/black.png' class='p-2'>");
+                    // }  
+                    // if ($('td#color3:contains("green")')) {
+                    //     $('td#color3').text("").append("<img src='img/green.png' class='p-2'>");
+                    // } 
+                    // if ($('td#color4:contains("grey")')) {
+                    //     $('td#color4').text("").append("<img src='img/grey.png' class='p-2'>");
+                    // } 
+
+                       
+
+
+                    // STATUS TEXT REPLACEMENT
+                    if ($('td#status0:contains("pednding")')) {
+                        $('td#status0').text("").append("Ожидается");
+                    }    
+                    if ($('td#status1:contains("out_of_stock")')) {
+                        $('td#status1').text("").append("Нет в наличии");
+                    }  
+                    if ($('td#status2:contains("in_stock")')) {
+                        $('td#status2').text("").append("В наличии");
+                    }  
+                    if ($('td#status3:contains("out_of_stock")')) {
+                        $('td#status3').text("").append("Нет в наличии");
+                    } 
+                    if ($('td#status4:contains("in_stock")')) {
+                        $('td#status4').text("").append("В наличии");
+                    } 
+                    // Fixing a little bit
+                    if ($('td#fix0:contains("1.6 MT Ambiente 85 л.с. МКПП 1.6 MT Ambiente 85 л.с. МКПП 1.6 MT Ambiente 85 л.с. МКПП")')) {
+                        $('td#fix0').text("").append('1.6 MT Ambiente 85 л.с. МКПП' + "<br/>" + "<span class='sub-text'>" + "+ доп. опция Радио-навигационная система Amundasen 2DIN, CD, MP3" + "</span>");
+                    }
+                $('#table-cars').append("</tbody>");
+            }
+            
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(getJSONData());
+    </script>
+    <script>
+    function AddData() {
+        let rows = "";
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let year = document.getElementById("year").value;
+        let description = document.getElementById("description").value;
+        let color = $("input[name='color']:checked").val();
+        // Changing text of colours into circles
+        if (color == "black"){
+            color = "<img src='img/black.png' class='p-2'>";
+        } else if (color == "white"){
+            color = "<img src='img/white.png' class='p-2'>";
+        } else if (color == "grey"){
+            color = "<img src='img/grey.png' class='p-2'>";
+        }  else if (color == "red"){
+            color = "<img src='img/red.png' class='p-2'>";
+        }  else if (color == "green"){
+            color = "<img src='img/green.png' class='p-2'>";
+        };
+        // Getting info from select
+        let status = $("#status-selector option:selected").val();   
+        // Generating a row   
+        rows += `<tr class="manually-added main-text table-body-bg">
+        <td>${name}<br/><span class='sub-text'>${description}</span></td>
+        <td class="manually-added main-text">${year}</td>
+        <td class="manually-added main-text color">${color}</td>
+        <td class="manually-added main-text">${status}</td>
+        <td class="manually-added main-text">${price} руб.</td>
+        <td><button class='delete' onclick="$(this).closest('tr').remove();">Удалить</button></td></tr>`;  
+        // Adding a car + info into the table               
+        $(rows).appendTo("#car-list");           
+}
+
+$( "img#white").click(function(){
+    $('#blackbg').css("visibility","hidden");  
+    $('#greybg').css("visibility","hidden");  
+    $('#redbg').css("visibility","hidden");  
+    $('#greenbg').css("visibility","hidden");  
+    $('#whitebg').css("visibility","visible");  
+    $("input[type='radio']#white").prop("checked", true);
+    $("input[type='radio']#black:checked").prop('checked', false);
+    $("input[type='radio']#grey:checked").prop('checked', false);
+    $("input[type='radio']#red:checked").prop('checked', false);
+    $("input[type='radio']#green:checked").prop('checked', false);
+});
+$( "img#black").click(function(){
+    $('#blackbg').css("visibility","visible");  
+    $('#greybg').css("visibility","hidden");  
+    $('#redbg').css("visibility","hidden");  
+    $('#greenbg').css("visibility","hidden");  
+    $('#whitebg').css("visibility","hidden");  
+    $("input[type='radio']#black").prop("checked", true);
+    $("input[type='radio']#white:checked").prop('checked', false);
+    $("input[type='radio']#grey:checked").prop('checked', false);
+    $("input[type='radio']#red:checked").prop('checked', false);
+    $("input[type='radio']#green:checked").prop('checked', false);
+});
+$( "img#grey").click(function(){
+    $('#blackbg').css("visibility","hidden");  
+    $('#greybg').css("visibility","visible");  
+    $('#redbg').css("visibility","hidden");  
+    $('#greenbg').css("visibility","hidden");  
+    $('#whitebg').css("visibility","hidden");  
+    $("input[type='radio']#grey").prop("checked", true);
+    $("input[type='radio']#white:checked").prop('checked', false);
+    $("input[type='radio']#black:checked").prop('checked', false);
+    $("input[type='radio']#red:checked").prop('checked', false);
+    $("input[type='radio']#green:checked").prop('checked', false);
+});
+$( "img#red").click(function(){
+    $('#blackbg').css("visibility","hidden");  
+    $('#greybg').css("visibility","hidden");  
+    $('#redbg').css("visibility","visible");  
+    $('#greenbg').css("visibility","hidden");  
+    $('#whitebg').css("visibility","hidden");  
+    $("input[type='radio']#red").prop("checked", true);
+    $("input[type='radio']#white:checked").prop('checked', false);
+    $("input[type='radio']#grey:checked").prop('checked', false);
+    $("input[type='radio']#black:checked").prop('checked', false);
+    $("input[type='radio']#green:checked").prop('checked', false);
+});
+$( "img#green").click(function(){
+    $('#blackbg').css("visibility","hidden");  
+    $('#greybg').css("visibility","hidden");  
+    $('#redbg').css("visibility","hidden");  
+    $('#greenbg').css("visibility","visible");  
+    $('#whitebg').css("visibility","hidden");  
+    $("input[type='radio']#green").prop("checked", true);
+    $("input[type='radio']#white:checked").prop('checked', false);
+    $("input[type='radio']#grey:checked").prop('checked', false);
+    $("input[type='radio']#red:checked").prop('checked', false);
+    $("input[type='radio']#black:checked").prop('checked', false);
+});
+
+</script>  
+</body>
+</html>

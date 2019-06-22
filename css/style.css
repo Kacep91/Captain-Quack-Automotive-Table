@@ -1,0 +1,352 @@
+.table-header{
+    background-color: #c4092f; 
+    color: white;    
+}
+.corner-top-left-rounded{
+    border-top-left-radius: .25rem!important;
+}
+.corner-top-right-rounded{
+    border-top-right-radius: .25rem!important;
+}
+.table-body-bg{
+    background-color: #f5f6f6;
+}
+.table-width-13{
+    width: 13% !important;
+}
+.table-width-40{
+    width: 40% !important;
+}
+
+body{
+    font-family: "Roboto";    
+}
+.main-text{
+    color: black;
+}
+.sub-text{
+    color: #797979;
+}
+.color-text{
+    position: absolute;
+    bottom: 70%;
+    font-size: 12px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #b8b8b8 !important;
+}
+.radio-colors{
+    position: relative;
+}
+.limiter{
+    max-width: 978px !important;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;  
+    
+}
+#table-cars{
+    margin-bottom: 330px;
+}
+.cars-available{
+    height: 20px;
+    margin-bottom: 30px;     
+    border-left: 3px solid #8b9497;  
+    position: relative;
+    margin-top: 160px;
+}
+.cars-available-text{
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 20px;
+    color: #282d30;
+    position: absolute;
+    padding-left: 12px; 
+    margin-top: -4px;
+}
+.delete{
+    color: #b5bbbd;
+    border-radius: 30px/30px;
+    background: none;
+    border: none;
+    width: 85px;
+    height: 30px;
+    transition: all 0.2s;
+}
+
+.delete:hover{
+    color: #ffffff;
+    background-color: rgb(40, 45, 48);
+    transition: all 0.2s;
+}
+
+input#name, input#year, input#price{    
+    max-width: 306px;
+    height: 40px;
+    border-radius: 0% !important;
+    border-top: 1px solid #dcdcdc !important;
+    border-right: 1px solid #dcdcdc !important;
+    border-bottom: 2px solid #dcdcdc !important;
+    border-left: 1px solid #dcdcdc !important;
+    
+}
+input#name:hover, input#year:hover, input#price:hover{    
+    border-bottom: 2px solid #c4092f !important;
+    outline: 0;  
+    cursor: pointer;
+}
+input#name:valid, input#year:valid, input#price:valid{
+    outline: 0; 
+    box-shadow: none;
+    
+}
+input#name:focus, input#year:focus, input#price:focus{    
+    outline: 0; 
+    border-bottom: 2px solid #111111 !important;   
+}
+
+input#description{
+    border-radius: 0% !important;
+    border-top: 1px solid #dcdcdc !important;
+    border-right: 1px solid #dcdcdc !important;
+    border-bottom: 2px solid #dcdcdc !important;
+    border-left: 1px solid #dcdcdc !important;
+}
+input#description:hover{    
+    border-bottom: 2px solid #c4092f !important;
+    outline: 0;  
+    cursor: pointer;
+}
+input#description:valid{
+    outline: 0; 
+    box-shadow: none;
+}
+input#description:focus{    
+    outline: 0;  
+}
+
+input::placeholder{
+    font-size: 12px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #b8b8b8 !important;
+}
+.form-limit{
+    width: 306px;
+}
+#header,#footer{
+    max-width: 1920px;
+    height: 100px;
+    background-color: #282d30;
+}
+.caramba-text{
+    color: #282d30;
+    font-size: 42px;
+    font-family: "Roboto";
+    font-weight: 700;
+}
+.footer-text {
+    font-size: 11px;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: rgb(255, 255, 255) !important;  
+    padding: 35px;     
+}
+.btn-send{
+    background-color: #c4092f !important;
+    color: #ffffff !important;
+    max-width: 306px;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+.selector-status, .radio-colors{
+    width: 306px !important;    
+}
+select.selector-status{
+    border-radius: 0% !important;
+    border-top: 1px solid #dcdcdc !important;
+    border-right: 1px solid #dcdcdc !important;
+    border-bottom: 2px solid #dcdcdc !important;
+    border-left: 1px solid #dcdcdc !important;
+}
+select:hover{
+    border-bottom: 2px solid #c4092f !important;
+    outline: 0;  
+    cursor: pointer;
+}
+select:valid{
+    outline: 0; 
+    box-shadow: none;
+}
+option:hover{
+    outline: 0; 
+    box-shadow: none;
+    background-color: #ffffff !important;
+    color: black !important;
+}
+option:focus{
+    outline: 0; 
+    box-shadow: none;
+}
+select:focus{
+    border-bottom: 2px solid #111111 !important;
+}
+select:focus-within{
+    border-bottom: 2px solid #111111 !important;
+}
+.selector-status{
+    font-size: 12px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #b8b8b8 !important;
+}
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;   
+    
+}
+/* IMAGE STYLES */
+    /*  [type=radio] + img {
+    cursor: pointer;      
+} */
+/* CHECKED STYLES */
+/* [type=radio]:checked + img ~ .img-checked-bg {
+    visibility: visible;
+} */
+.img-front{
+    position:relative;
+    z-index: 1;
+}
+.img-checked-bg{
+    visibility: hidden;
+    position: absolute;
+    bottom: 3px;
+    left: 3.3px;
+    z-index: 0;
+}
+.img-checked-bg-toggled{
+    visibility: hidden;
+    position: absolute;
+    bottom: 3px;
+    left: 3.3px;
+    z-index: 0;
+}
+.radio-color{
+    border-radius: 50% !important;
+}
+.placeholder-animation{
+    font-size: 12px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #b8b8b8 !important;
+}
+
+/* Animations */
+label.placeholder-animation {
+    position:relative;    
+    width: 100%;     
+}
+    
+span.placeholder-animation {
+    padding-left:12px;
+    padding-top: 14px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    pointer-events: none;
+    position:absolute;
+    left:0;
+    top:0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:1;
+}
+
+input#name:focus + span.placeholder-animation, input#name:not(:placeholder-shown) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+
+input#year:focus + span.placeholder-animation, input#year:not(:placeholder-shown) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+
+input#price:focus + span.placeholder-animation, input#price:not(:placeholder-shown) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+
+input#description:focus + span.placeholder-animation, input#description:not(:placeholder-shown) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+
+/* For IE Browsers*/
+
+input#name:focus + span.placeholder-animation, input#name:not(:-ms-input-placeholder) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+input#year:focus + span.placeholder-animation, input#year:not(:-ms-input-placeholder) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+input#price:focus + span.placeholder-animation, input#price:not(:-ms-input-placeholder) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+input#description:focus + span.placeholder-animation, input#description:not(:-ms-input-placeholder) + span.placeholder-animation {
+    opacity:1;
+    transform: scale(1) translateY(-90%) translateX(0px);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 720px) and (max-width: 978px)
+{
+
+input#name, input#year, input#price{    
+    width: 100% !important;
+    height: 40px;
+    border-radius: 0% !important;
+    border-top: 1px solid #dcdcdc !important;
+    border-right: 1px solid #dcdcdc !important;
+    border-bottom: 2px solid #dcdcdc !important;
+    border-left: 1px solid #dcdcdc !important;    
+}
+.form-limit{
+    width: 100% !important;      
+}
+.fix{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn-send{
+    background-color: #c4092f !important;
+    color: #ffffff !important;
+    width: 33% !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+.selector-status, .radio-colors{
+    width: 32% !important; 
+    height: 40px !important;     
+}
+.img-size{
+    width: 20px !important;
+    height: 20px !important;
+}
+.main-text{
+    color: black;
+    font-size: 14px;
+}
+.sub-text{
+    color: #797979;
+    font-size: 14px;
+}
+};
