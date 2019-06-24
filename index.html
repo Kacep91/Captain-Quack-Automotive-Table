@@ -1,125 +1,255 @@
 <html>
-<head>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300, 400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>    
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300, 400,500,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="./css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div id="header" class="container-fluid">
-        <div class="header-image d-flex m-auto justify-content-center">
-            <img src="img/duck.png" alt="" class="img-fluid">
-        </div>
+      <div class="header-image d-flex m-auto justify-content-center">
+        <img src="img/duck.png" alt="" class="img-fluid" />
+      </div>
     </div>
     <div class="container d-flex flex-column limiter">
-    <p class="ml-auto mr-auto mb-4 mt-4 pb-4 pt-4 caramba-text">¡Ay caramba!</p>        
-    <form id="mobile-inputs" class="d-flex flex-fill justify-content-between">
-        <div class="form-group form-limit d-flex mobile-div-name"> 
-            <label class="placeholder-animation flex-fill">              
-                <input type="text" class="form-control" id="name" aria-describedby="nameInput" placeholder=" " class="placeholder-animation"> 
-                <span class="placeholder-animation">Название</span>
-            </label>                
+      <p class="ml-auto mr-auto mb-4 mt-4 pb-4 pt-4 caramba-text">
+        ¡Ay caramba!
+      </p>
+      <form id="mobile-inputs" class="d-flex flex-fill justify-content-between">
+        <div class="form-group form-limit d-flex mobile-div-name">
+          <label class="placeholder-animation flex-fill">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="nameInput"
+              placeholder=" "
+              class="placeholder-animation"
+            />
+            <span class="placeholder-animation">Название</span>
+          </label>
         </div>
-        <div class="form-group form-limit fix d-flex mobile-div-year">  
-            <label class="placeholder-animation flex-fill">              
-                <input type="text" class="form-control" id="year" aria-describedby="yearInput" placeholder=" " class="placeholder-animation">   
-                <span class="placeholder-animation">Год</span>
-            </label> 
+        <div class="form-group form-limit fix d-flex mobile-div-year">
+          <label class="placeholder-animation flex-fill">
+            <input
+              type="text"
+              class="form-control"
+              id="year"
+              aria-describedby="yearInput"
+              placeholder=" "
+              class="placeholder-animation"
+            />
+            <span class="placeholder-animation">Год</span>
+          </label>
         </div>
-        <div class="form-group form-limit d-flex mobile-div-price"> 
-            <label class="placeholder-animation flex-fill">            
-                <input type="text" class="form-control" id="price" aria-describedby="priceInput" placeholder=" " class="placeholder-animation"> 
-                <span class="placeholder-animation">Цена</span> 
-            </label>  
+        <div class="form-group form-limit d-flex mobile-div-price">
+          <label class="placeholder-animation flex-fill">
+            <input
+              type="text"
+              class="form-control"
+              id="price"
+              aria-describedby="priceInput"
+              placeholder=" "
+              class="placeholder-animation"
+            />
+            <span class="placeholder-animation">Цена</span>
+          </label>
         </div>
-    </form>
-    <form class="d-flex flex-row">
-        <div class="form-group flex-fill">   
-            <label class="placeholder-animation flex-fill">             
-                <input type="text" class="form-control" id="description" aria-describedby="description" placeholder=" ">  
-                <span class="placeholder-animation">Описание</span> 
-            </label>               
-        </div>        
-    </form>
-    <form id="mobile-inputs2" class="d-inline-flex flex-fill justify-content-between align-content-center">
-    <div class="radio-colors form-limit d-flex flex-row align-items-center justify-content-start p-0 m-0 mobile-div-color">
-        <label class="color-text">Цвет</label>
-        <div class="form-check pl-2 pr-2">
-                <label>
-                    <input class="form-check-input" type="radio" name="color" id="colorWhite" value="white">
-                    <img src="img/white.png" class="img-circle img-front" id="white">
-                    <img src="/img/img-bg-checked.png" class='img-checked-bg' id="whitebg">
-                </label>
-            </div>
-        <div class="form-check pl-2 pr-2">
-            <label>    
-                <input class="form-check-input" type="radio" name="color" id="colorBlack" value="black">  
-                <img src="img/black.png" class="img-circle img-front" id="black">  
-                <img src="/img/img-bg-checked.png" class='img-checked-bg' id="blackbg">
-            </label>   
+      </form>
+      <form class="d-flex flex-row">
+        <div class="form-group flex-fill">
+          <label class="placeholder-animation flex-fill">
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              aria-describedby="description"
+              placeholder=" "
+            />
+            <span class="placeholder-animation">Описание</span>
+          </label>
         </div>
-        <div class="form-check pl-2 pr-2">
-                <label>    
-                    <input class="form-check-input" type="radio" name="color" id="colorGrey" value="grey">  
-                    <img src="img/grey.png" class="img-circle img-front" id="grey"> 
-                    <img src="/img/img-bg-checked.png" class='img-checked-bg' id="greybg"> 
-                </label>   
-            </div>
-        <div class="form-check pl-2 pr-2">
-            <label>    
-                <input class="form-check-input" type="radio" name="color" id="colorRed" value="red">  
-                <img src="img/red.png" class="img-circle img-front" id="red">  
-                <img src="/img/img-bg-checked.png" class='img-checked-bg' id="redbg">
-            </label>   
+      </form>
+      <form
+        id="mobile-inputs2"
+        class="d-inline-flex flex-fill justify-content-between align-content-center"
+      >
+        <div
+          class="radio-colors form-limit d-flex flex-row align-items-center justify-content-start p-0 m-0 mobile-div-color"
+        >
+          <label class="color-text">Цвет</label>
+          <div class="form-check pl-2 pr-2">
+            <label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="color"
+                id="colorWhite"
+                value="white"
+              />
+              <img
+                src="img/white.png"
+                class="img-circle img-front"
+                id="white"
+              />
+              <img
+                src="/img/img-bg-checked.png"
+                class="img-checked-bg"
+                id="whitebg"
+              />
+            </label>
+          </div>
+          <div class="form-check pl-2 pr-2">
+            <label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="color"
+                id="colorBlack"
+                value="black"
+              />
+              <img
+                src="img/black.png"
+                class="img-circle img-front"
+                id="black"
+              />
+              <img
+                src="/img/img-bg-checked.png"
+                class="img-checked-bg"
+                id="blackbg"
+              />
+            </label>
+          </div>
+          <div class="form-check pl-2 pr-2">
+            <label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="color"
+                id="colorGrey"
+                value="grey"
+              />
+              <img src="img/grey.png" class="img-circle img-front" id="grey" />
+              <img
+                src="/img/img-bg-checked.png"
+                class="img-checked-bg"
+                id="greybg"
+              />
+            </label>
+          </div>
+          <div class="form-check pl-2 pr-2">
+            <label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="color"
+                id="colorRed"
+                value="red"
+              />
+              <img src="img/red.png" class="img-circle img-front" id="red" />
+              <img
+                src="/img/img-bg-checked.png"
+                class="img-checked-bg"
+                id="redbg"
+              />
+            </label>
+          </div>
+          <div class="form-check pl-2 pr-2">
+            <label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="color"
+                id="colorGreen"
+                value="green"
+              />
+              <img
+                src="img/green.png"
+                class="img-circle img-front"
+                id="green"
+              />
+              <img
+                src="/img/img-bg-checked.png"
+                class="img-checked-bg"
+                id="greenbg"
+              />
+            </label>
+          </div>
         </div>
-        <div class="form-check pl-2 pr-2">
-            <label>    
-                <input class="form-check-input" type="radio" name="color" id="colorGreen" value="green">  
-                <img src="img/green.png" class="img-circle img-front" id="green">  
-                <img src="/img/img-bg-checked.png" class='img-checked-bg' id="greenbg">
-            </label>   
-        </div>
-    </div>
-        <select class="selector-status form-limit mr-2 ml-2 mobile-div-select" id="status-selector">
-                <option selected value="Статус не выбран">Статус</option>
-                <option value="В наличии">В наличии</option>
-                <option value="Ожидается">Ожидается</option>
-                <option value="Нет в наличии">Нет в наличии</option>
+        <select
+          class="selector-status form-limit mr-2 ml-2 mobile-div-select"
+          id="status-selector"
+        >
+          <option selected value="Статус не выбран">Статус</option>
+          <option value="В наличии">В наличии</option>
+          <option value="Ожидается">Ожидается</option>
+          <option value="Нет в наличии">Нет в наличии</option>
         </select>
-        <button type="button" class="btn btn-send form-limit mobile-div-send" onclick="return AddData()">ОТПРАВИТЬ ></button>
-    </form>
-    
-<div class="cars-available"><p class="cars-available-text">АВТОМОБИЛИ В НАЛИЧИИ</p></div>
-<div class="m-auto">
-<table id="table-cars" class="table">
-		<thead>
-			<tr>
-				<th class="table-header table-width-40 corner-top-left-rounded" colspan='3'>Название</th>
-				<th class="table-header" colspan='1'>Год</th>
-				<th class="table-header" colspan='1'>Цвет</th>
-                <th class="table-header w-25" colspan='2'>Статус</th>
-                <th class="table-header w-25" colspan='3'>Цена</th>
-                <th class="table-header corner-top-right-rounded" colspan='3'></th>                
-			</tr>
-		</thead>
-    </table>
-</div>
-</div>
-<div id="footer" class="container-fluid">
-    <div class="header-image d-flex ml-auto mr-auto text-center justify-content-center align-content-center">
-        <p class="footer-text">© 2015 CAPTAIN QUACK <br/> Десница тысячелетия и моллюск!</p>
+        <button
+          type="button"
+          class="btn btn-send form-limit mobile-div-send"
+          onclick="return AddData()"
+        >
+          ОТПРАВИТЬ >
+        </button>
+      </form>
+
+      <div class="cars-available">
+        <p class="cars-available-text">АВТОМОБИЛИ В НАЛИЧИИ</p>
+      </div>
+      <div class="m-auto">
+        <table id="table-cars" class="table">
+          <thead>
+            <tr>
+              <th
+                class="table-header table-width-40 corner-top-left-rounded"
+                colspan="3"
+              >
+                Название
+              </th>
+              <th class="table-header" colspan="1">Год</th>
+              <th class="table-header" colspan="1">Цвет</th>
+              <th class="table-header w-25" colspan="2">Статус</th>
+              <th class="table-header w-25" colspan="3">Цена</th>
+              <th
+                class="table-header corner-top-right-rounded"
+                colspan="3"
+              ></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
     </div>
-</div>
-<!-- SCRIPTS-->
-<script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/logics.js"></script>
+    <div id="footer" class="container-fluid">
+      <div
+        class="header-image d-flex ml-auto mr-auto text-center justify-content-center align-content-center"
+      >
+        <p class="footer-text">
+          © 2015 CAPTAIN QUACK <br />
+          Десница тысячелетия и моллюск!
+        </p>
+      </div>
+    </div>
+    <!-- SCRIPTS-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script
+      src="/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/logics.js"></script>
     <!-- LOADING JSON TABLE -->
     <script>
-        $(document).ready(getJSONData());
+      $(document).ready(getJSONData());
     </script>
-    <script>
-    
-</script>  
-</body>
+    <script></script>
+  </body>
 </html>
